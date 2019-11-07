@@ -10,15 +10,15 @@ func index(w http.ResponseWriter, r *http.Request) {
 }
 
 func option1(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h1>Option1 check</h1>")
+	fmt.Fprintf(w, "<h1>Option1 selected</h1>")
 }
 
 func option2(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h1>Option2 check</h1>")
+	fmt.Fprintf(w, "<h1>Option2 selected</h1>")
 }
 
 func option3(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h1>Option3 check</h1>")
+	fmt.Fprintf(w, "<h1>Option3 selected</h1>")
 }
 
 func main() {
