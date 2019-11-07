@@ -6,16 +6,26 @@ import (
 )
 
 func index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h1>Hello World</h1>")
+	fmt.Fprintf(w, "<h1>Hello Go-App</h1>")
 }
 
-func check(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h1>Health check</h1>")
+func option1(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "<h1>Option1 check</h1>")
+}
+
+func option2(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "<h1>Option2 check</h1>")
+}
+
+func option3(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "<h1>Option3 check</h1>")
 }
 
 func main() {
 	http.HandleFunc("/", index)
-	http.HandleFunc("/health_check", check)
+	http.HandleFunc("/option1", option1)
+	http.HandleFunc("/option2", option1)
+	http.HandleFunc("/option3", option1)
 	fmt.Println("Server starting...")
 	http.ListenAndServe(":3000", nil)
 }
